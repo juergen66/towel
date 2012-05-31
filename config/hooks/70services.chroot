@@ -1,0 +1,19 @@
+#!/bin/sh
+
+update-rc.d -f dropbear remove
+update-rc.d -f ebtables remove
+update-rc.d -f hwclock.sh remove
+update-rc.d -f hwclockfirst.sh remove
+update-rc.d -f lvm2 remove
+update-rc.d -f nfs-common remove
+update-rc.d -f pads remove
+update-rc.d -f partimaged remove
+update-rc.d -f rpcbind remove
+update-rc.d -f smartmontools remove
+update-rc.d -f tftpd-hpa remove
+update-rc.d -f udftools remove
+update-rc.d -f udhcpd remove
+
+update-rc.d hwclock.sh start 11 S .
+update-rc.d customize defaults
+

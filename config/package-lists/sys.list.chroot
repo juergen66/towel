@@ -1,0 +1,41 @@
+# Live System
+live-tools
+
+# Basics
+acpid
+apt-utils
+bash
+bash-completion
+console-common
+coreutils
+cu
+eject
+firmware-linux-free
+grub-pc
+kbd
+makedev
+man-db
+menu
+mgetty
+psmisc
+rlwrap
+rsyslog
+setserial
+util-linux
+vlock
+
+# X11
+gxmessage
+lxrandr
+x11-utils
+xinit
+xfonts-base
+xserver-xorg
+xterm
+
+# WMs
+icewm
+
+# Sound
+alsa-base
+alsa-utils

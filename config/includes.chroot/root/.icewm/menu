@@ -1,0 +1,4 @@
+prog "X Terminal" xterm xterm -ls
+prog "Web Browser" iceweasel iceweasel
+prog "Network Settings" wicd-curses xterm -e /root/bin/netsettings.sh
+separator

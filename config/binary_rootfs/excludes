@@ -1,0 +1,6 @@
+initrd.img
+vmlinuz
+boot/*
+root/boot/
+root/var/
+

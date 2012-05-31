@@ -1,0 +1,59 @@
+# Basic
+aespipe
+ascii
+dc
+debootstrap
+file
+ipv6calc
+mc
+screen
+sipcalc
+tmux
+
+# Text
+leafpad
+less
+nvi
+tofrodos
+
+# Serial
+gkermit
+gtkterm
+lrzsz
+minicom
+
+# Scripting
+pv
+pyp
+
+# Archivers
+arj
+bzip2
+cabextract
+dar
+gzip
+gzrt
+mscompress
+ncompress
+p7zip-full
+pax
+sharutils
+tar
+unace
+unrar-free
+unzip
+zip
+zoo
+
+# Sound
+alsaplayer-text alsaplayer-gtk alsaplayer-alsa alsaplayer-common
+
+# Viewers
+epdfview
+gpicview
+
+# MS Windows
+bkhive samdump2
+chntpw
+reglookup
+

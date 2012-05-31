@@ -1,0 +1,4 @@
+#!/bin/sh
+
+find config/* -maxdepth 0 -type f -exec rm \{\} \;
+lb clean noauto $*

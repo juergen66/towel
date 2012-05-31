@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ln -fs /root/ /home/root
+echo root:toor | /usr/sbin/chpasswd
+

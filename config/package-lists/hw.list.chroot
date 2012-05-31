@@ -1,0 +1,31 @@
+# General
+cpuid
+dmidecode
+lshw
+lsscsi
+pciutils
+pcmciautils
+usbutils
+x86info
+
+# Hard Drive
+blktool
+hdparm
+scsitools
+sdparm
+smartmontools
+
+# NIC
+ethtool
+mii-diag
+
+# Tape
+mt-st
+mtx
+
+# Testing
+bonnie++
+memtester
+spew
+stress
+

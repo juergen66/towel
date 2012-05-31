@@ -1,0 +1,36 @@
+#!/bin/sh
+
+lb config noauto \
+--clean \
+--debug \
+--cache-stages "bootstrap" \
+--bootstrap "debootstrap" \
+--bootstrap-flavour "standard" \
+--binary-images iso \
+--bootloader "grub2" \
+--distribution "sid" \
+--includes "none" \
+--iso-volume "$(date +%Y-%m-%d)" \
+--iso-application "Towel Live" \
+--iso-publisher "Juergen Fiedler - juergen.fiedler@gmail.com" \
+--iso-volume "sid-$(date +%Y%m%d)" \
+--debian-installer "false" \
+--binary-filesystem "fat32" \
+--linux-flavours "486" \
+--apt-recommends "false" \
+--apt-secure "false" \
+--security "false" \
+--volatile "false" \
+--apt-options "--yes --force-yes" \
+--win32-loader false \
+--initsystem "sysvinit" \
+--parent-mirror-bootstrap http://ftp.us.debian.org/debian/ \
+--mirror-bootstrap http://ftp.us.debian.org/debian/ \
+--parent-mirror-binary http://ftp.us.debian.org/debian/
+
+echo >> config/bootstrap
+cat <<END_OF_BOOTSTRAP >> config/bootstrap
+# Added 'manually' at the end of auto/config:
+LB_BOOTSTRAP_INCLUDE="bzip2"
+LB_BOOTSTRAP_EXCLUDE="libept1"
+END_OF_BOOTSTRAP

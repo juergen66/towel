@@ -1,0 +1,6 @@
+ShowMoveSizeStatus = 1
+LockCommand = "/usr/bin/vlock -n"
+ShutdownCommand="halt"
+RebootCommand="reboot"
+TaskBarShowMailboxStatus = 0
+TaskBarShowWorkspaces = 0

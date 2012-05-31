@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Clean resolv.conf
+rm /etc/resolv.conf
+touch /etc/resolv.conf

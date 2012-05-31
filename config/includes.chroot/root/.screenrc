@@ -1,0 +1,3 @@
+startup_message off
+caption always "%{= kK}%{wk} $USER@%H%-21=%{wk}%D %m/%d/%Y %0c"
+hardstatus alwayslastline "%?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %{wk}"

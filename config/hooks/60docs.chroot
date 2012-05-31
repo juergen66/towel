@@ -1,0 +1,31 @@
+#!/bin/sh
+
+mkdir /tmp/doc/
+
+KEEP_DOCS="
+bash-completion
+bridge-utils
+hostap-utils
+icewm-common
+iw
+linux-wlan-ng-doc
+live-boot
+live-config
+netsed
+python-pexpect
+testdisk
+"
+
+for PKG in $KEEP_DOCS
+do
+	mv /usr/share/doc/$PKG /tmp/doc/
+done
+
+rm -rf /usr/share/doc/*
+
+for PKG in $KEEP_DOCS
+do 
+	mv /tmp/doc/$PKG /usr/share/doc/
+done
+
+rm -rf /tmp/doc

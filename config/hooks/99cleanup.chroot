@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# (copied from:)
+# /usr/share/live-helper/hooks/mini - hook list for live-helper(7)
+
+set -e
+
+# Removing unused packages
+UNUSED="info
+    install-info
+    libgl1-mesa-dri
+    mutt
+    perl
+    python-apt
+    python-reportbug
+    reportbug
+    tasksel
+"
+
+for PACKAGE in $UNUSED
+do
+	if ! apt-get remove --purge --yes "${PACKAGE}"
+	then
+		echo "WARNING: ${PACKAGE} isn't installed"
+	fi
+done
+
+apt-get autoremove --yes || true
+
+# Removing unused files
+find . -name *~ | xargs rm -f
+
+# We don't really have KDE 
+rm -rf /usr/share/kde4/
+
+rm -rf /usr/share/locale/*
+rm -rf /usr/share/i18n/*
+rm -rf /usr/share/info/*
+rm -rf /var/cache/man/*
+
+# Cleaning apt
+rm -rf /var/lib/apt/lists
+mkdir -p /var/lib/apt/lists/partial
+
+rm /var/cache/apt/pkgcache.bin
+rm /var/cache/apt/srcpkgcache.bin
+
+# Truncating logs
+for FILE in $(find /var/log/ -type f)
+do
+	cat < /dev/null > $FILE
+done
+
+apt-get -y --purge remove aptitude

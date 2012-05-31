@@ -1,0 +1,77 @@
+# Basics
+fuse
+fuse-utils
+
+# UNIX/Linux
+btrfs-tools
+e2fsprogs
+e2tools
+e2undel
+ext3grep
+extundelete
+genext2fs
+reiser4progs
+reiserfsprogs
+ufsutils
+
+# Macintosh
+hfsplus
+hfsprogs
+hfsutils
+
+# DOS/Windows
+dosfstools
+fatattr
+fatresize
+mtools
+ntfs-3g
+scrounge-ntfs
+
+# ISO
+dvd+rw-tools
+genisoimage
+udftools
+wodim
+
+# Net
+curlftpfs
+httpfs2
+nfs-common
+nfs-common
+open-iscsi
+samba4-clients
+sshfs
+
+# RAID(ish)
+dmsetup
+lvm2
+
+# Other
+archivemount
+mtd-utils
+squashfs-tools
+
+# Partitioning
+gnu-fdisk
+gpart 
+parted
+
+# Maintenance
+disktype
+fsarchiver
+mbr
+partclone
+partimage
+partimage-server
+wipe
+
+# Recovery
+dares
+dc3dd
+dcfldd
+ddrescue
+gddrescue
+magicrescue
+myrescue
+recover 
+recoverdm
