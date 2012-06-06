@@ -55,5 +55,6 @@ gpicview
 # MS Windows
 bkhive samdump2
 chntpw
+pst-utils
 reglookup
 
