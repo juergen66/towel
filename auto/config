@@ -13,7 +13,7 @@ lb config noauto \
 --iso-volume "$(date +%Y-%m-%d)" \
 --iso-application "Towel Live" \
 --iso-publisher "Juergen Fiedler - juergen.fiedler@gmail.com" \
---iso-volume "towel-$(date +%Y%m%d)" \
+--iso-volume "towel-$(date +%m%d%Y)" \
 --debian-installer "false" \
 --binary-filesystem "fat32" \
 --linux-flavours "486" \
