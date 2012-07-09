@@ -4,7 +4,7 @@ lb config noauto \
 --clean \
 --debug \
 --cache-stages "bootstrap" \
---bootstrap "debootstrap" \
+--bootstrap "cdebootstrap" \
 --bootstrap-flavour "standard" \
 --binary-images iso \
 --bootloader "grub2" \
