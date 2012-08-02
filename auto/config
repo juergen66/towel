@@ -9,7 +9,6 @@ lb config noauto \
 --binary-images iso \
 --bootloader "grub2" \
 --distribution "sid" \
---includes "none" \
 --iso-volume "$(date +%Y-%m-%d)" \
 --iso-application "Towel Live" \
 --iso-publisher "Juergen Fiedler - juergen.fiedler@gmail.com" \
@@ -27,10 +26,3 @@ lb config noauto \
 --parent-mirror-bootstrap http://ftp.us.debian.org/debian/ \
 --mirror-bootstrap http://ftp.us.debian.org/debian/ \
 --parent-mirror-binary http://ftp.us.debian.org/debian/
-
-echo >> config/bootstrap
-cat <<END_OF_BOOTSTRAP >> config/bootstrap
-# Added 'manually' at the end of auto/config:
-LB_BOOTSTRAP_INCLUDE="bzip2"
-LB_BOOTSTRAP_EXCLUDE="libept1"
-END_OF_BOOTSTRAP
