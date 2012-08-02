@@ -1,3 +1,3 @@
 startup_message off
-caption always "%{= kK}%{wk} $USER@%H%-21=%{wk}%D %m/%d/%Y %0c"
-hardstatus alwayslastline "%?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{kw}%?%+Lw%? %{wk}"
+# from http://munkymorgy.blogspot.com/2008/12/screen-hardstatus_16.html:
+hardstatus alwayslastline '%{= kW}%-Lw%{= KW}%50>%n%f* %t%{= kW}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
