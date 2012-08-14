@@ -52,6 +52,7 @@ mtd-utils
 squashfs-tools
 
 # Partitioning
+gdisk
 gnu-fdisk
 gpart 
 parted
