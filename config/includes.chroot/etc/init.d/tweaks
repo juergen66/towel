@@ -1,18 +1,25 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          customize
+# Provides:          tweaks
 # Required-Start:
 # Required-Stop:     
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
 ### END INIT INFO
 
+PATH="/sbin:/bin:/usr/bin"
+
+. /lib/lsb/init-functions
+
+
 case "$1" in
   start)
-        echo -n Running final customisations...
-        /sbin/ldconfig
+	RETVAL=0
+        log_action_begin_msg "Runtime tweaks to the live environment"
+        ldconfig
 	touch /var/lib/misc/udhcpd.leases
 	mkdir -p /mnt/tmp/
+        log_action_end_msg $RETVAL
         ;;
   stop)
         exit 0

@@ -15,5 +15,5 @@ update-rc.d -f udftools remove
 update-rc.d -f udhcpd remove
 
 update-rc.d hwclock.sh start 11 S .
-update-rc.d customize defaults
+update-rc.d tweaks defaults
 
