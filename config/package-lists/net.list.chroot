@@ -14,6 +14,7 @@ ntpdate
 wicd-cli
 wicd-curses
 wicd-daemon
+wicd-gtk
 
 # Connectivity
 ppp
@@ -86,6 +87,7 @@ tcptraceroute
 traceroute
 telnet
 whois
+zenmap
 
 # Pipes
 cryptcat
@@ -98,9 +100,11 @@ dropbear
 tftpd-hpa
 
 # WiFi
+aircrack-ng
 hostap-utils
 iw
 wireless-tools
 wpasupplicant
 linux-wlan-ng
 linux-wlan-ng-doc
+wifite
