@@ -1,0 +1,5 @@
+?package(zenmap):needs="X11" \
+        section="Network/Monitoring" \
+        title="Zenmap" \
+        command="zenmap" \
+        hints="Zenmap nmap GUI"

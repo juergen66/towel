@@ -1,0 +1,16 @@
+translate section->section
+  Apps/Net Apps/Network
+endtranslate
+
+substitute section->section
+  Apps/ /
+endtranslate
+
+substitute section->section
+  Applications/ /
+endtranslate
+
+translate section->section
+  WindowManagers "Window Managers"
+endtranslate
+
