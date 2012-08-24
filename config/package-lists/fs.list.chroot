@@ -34,6 +34,7 @@ udftools
 wodim
 
 # Net
+cifs-utils
 curlftpfs
 httpfs2
 nfs-common
@@ -54,7 +55,8 @@ squashfs-tools
 # Partitioning
 gdisk
 gnu-fdisk
-gpart 
+gpart
+gparted
 parted
 
 # Maintenance
