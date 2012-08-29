@@ -17,10 +17,12 @@ wicd-daemon
 wicd-gtk
 
 # Connectivity
+6tunnel
 ppp
 pppconfig
 pppoe
 pppoeconf
+proxychains
 ptunnel
 tsocks
 vpnc
@@ -51,6 +53,7 @@ dsniff
 finger
 fping
 httping
+hping3
 icmpinfo
 icmpush
 iperf
@@ -77,7 +80,7 @@ paris-traceroute
 reaver
 scli
 ssldump
-#sslscan
+sslscan
 smb-nat
 snmp
 tcpdump
@@ -86,6 +89,7 @@ tcpreplay
 tcptraceroute
 traceroute
 telnet
+wbox
 whois
 zenmap
 
@@ -107,4 +111,6 @@ wireless-tools
 wpasupplicant
 linux-wlan-ng
 linux-wlan-ng-doc
+wavemon
+weplab
 wifite
