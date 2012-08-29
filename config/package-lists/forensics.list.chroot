@@ -9,12 +9,17 @@ testdisk
 recoverjpeg
 safecopy
 
+# Mail
+mboxgrep
+pst-utils
+readpst
+tnef
+
 # Windows
 galleta
 grokevt
 missidentify
 pasco
-readpst
 rifiuti
 rifiuti2
 vinetto

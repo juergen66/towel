@@ -31,6 +31,7 @@ arj
 bzip2
 cabextract
 dar
+fcrackzip
 gzip
 gzrt
 mscompress
@@ -55,6 +56,5 @@ gpicview
 # MS Windows
 bkhive samdump2
 chntpw
-pst-utils
 reglookup
 
