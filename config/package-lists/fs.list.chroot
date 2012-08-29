@@ -66,6 +66,7 @@ mbr
 partclone
 partimage
 partimage-server
+scrub
 wipe
 
 # Recovery
