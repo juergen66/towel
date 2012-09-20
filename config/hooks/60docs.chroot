@@ -6,6 +6,7 @@ KEEP_DOCS="
 bash-completion
 bridge-utils
 hostap-utils
+hping3
 icewm-common
 iw
 linux-wlan-ng-doc
