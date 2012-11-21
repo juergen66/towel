@@ -63,6 +63,7 @@ parted
 disktype
 fsarchiver
 mbr
+nwipe
 partclone
 partimage
 partimage-server
