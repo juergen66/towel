@@ -1,6 +1,9 @@
 # Low Level
 cmospwd
 
+# Password Recovery
+john
+
 # File System
 binwalk
 foremost
