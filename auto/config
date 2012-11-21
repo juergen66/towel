@@ -18,7 +18,6 @@ lb config noauto \
 --apt-recommends "false" \
 --apt-secure "false" \
 --security "false" \
---volatile "false" \
 --apt-options "--yes --force-yes" \
 --win32-loader false \
 --initsystem "sysvinit" \
