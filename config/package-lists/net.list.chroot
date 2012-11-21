@@ -1,6 +1,6 @@
 # General
 bridge-utils
-dhcp3-client
+isc-dhcp-client
 ebtables
 ifupdown
 net-tools
@@ -45,7 +45,6 @@ wireshark
 4g8
 arp-scan
 arping
-bittwist
 dhcping
 dnstracer
 dnsutils
