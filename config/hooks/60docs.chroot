@@ -9,6 +9,7 @@ hostap-utils
 hping3
 icewm-common
 iw
+john
 linux-wlan-ng-doc
 live-boot
 live-config
