@@ -1,7 +1,3 @@
-# Basics
-fuse
-fuse-utils
-
 # UNIX/Linux
 btrfs-tools
 e2fsprogs
