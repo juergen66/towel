@@ -7,6 +7,7 @@ update-rc.d -f hwclockfirst.sh remove
 update-rc.d -f lvm2 remove
 update-rc.d -f nfs-common remove
 update-rc.d -f open-iscsi remove
+update-rc.d -f openvpn remove
 update-rc.d -f pads remove
 update-rc.d -f partimaged remove
 update-rc.d -f rpcbind remove
