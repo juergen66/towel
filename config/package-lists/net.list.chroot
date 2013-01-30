@@ -18,6 +18,7 @@ wicd-gtk
 
 # Connectivity
 6tunnel
+openvpn
 ppp
 pppconfig
 pppoe
