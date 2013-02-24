@@ -1,4 +1,4 @@
 prog "X Terminal" xterm xterm -ls
 prog "Web Browser" iceweasel iceweasel
-prog "Network Settings" "/usr/share/pixmaps/wicd-gtk.xpm" /bin/sh -c "/usr/bin/wicd-gtk -n"
+prog "Network Settings" netsettings.sh xterm -e /root/bin/netsettings.sh
 separator
