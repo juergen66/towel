@@ -35,7 +35,6 @@ curlftpfs
 httpfs2
 nfs-common
 nfs-common
-open-iscsi
 samba4-clients
 sshfs
 
@@ -49,7 +48,6 @@ mtd-utils
 squashfs-tools
 
 # Partitioning
-gdisk
 gnu-fdisk
 gpart
 gparted

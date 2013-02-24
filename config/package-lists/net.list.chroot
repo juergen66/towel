@@ -14,7 +14,6 @@ ntpdate
 wicd-cli
 wicd-curses
 wicd-daemon
-wicd-gtk
 
 # Connectivity
 6tunnel
@@ -91,7 +90,6 @@ traceroute
 telnet
 wbox
 whois
-zenmap
 
 # Pipes
 cryptcat
