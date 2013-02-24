@@ -17,8 +17,8 @@ lb config noauto \
 --linux-flavours "486" \
 --apt-recommends "false" \
 --apt-secure "false" \
+--apt-options "--yes --force-yes --auto-remove" \
 --security "false" \
---apt-options "--yes --force-yes" \
 --win32-loader false \
 --initsystem "sysvinit" \
 --parent-mirror-bootstrap http://ftp.us.debian.org/debian/ \
