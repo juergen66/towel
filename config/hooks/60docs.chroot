@@ -3,6 +3,7 @@
 mkdir /tmp/doc/
 
 KEEP_DOCS="
+acpid
 bash-completion
 bridge-utils
 hostap-utils
