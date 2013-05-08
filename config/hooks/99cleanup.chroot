@@ -6,8 +6,7 @@
 set -e
 
 # Removing unused packages
-UNUSED="info
-    install-info
+UNUSED="info 
     libgl1-mesa-dri
     mutt
     perl
