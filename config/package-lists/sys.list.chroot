@@ -25,6 +25,7 @@ util-linux
 vlock
 
 # X11
+grun
 gxmessage
 lxrandr
 x11-utils

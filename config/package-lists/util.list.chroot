@@ -1,11 +1,13 @@
 # Basic
 aespipe
 ascii
+bc
 dc
 debootstrap
 file
 ipv6calc
 mc
+reptyr
 screen
 sipcalc
 tmux
@@ -21,6 +23,9 @@ gkermit
 gtkterm
 lrzsz
 minicom
+
+# Encryption
+tcplay
 
 # Scripting
 pv

@@ -3,5 +3,6 @@ ht
 
 # Python
 python
+ipython
 python-pexpect
 python-scapy
