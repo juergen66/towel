@@ -34,8 +34,6 @@ cifs-utils
 curlftpfs
 httpfs2
 nfs-common
-nfs-common
-samba4-clients
 sshfs
 
 # RAID(ish)
