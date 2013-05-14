@@ -5,8 +5,8 @@ lb config noauto \
 --debug \
 --cache-stages "bootstrap" \
 --bootstrap "debootstrap" \
---binary-images iso \
---bootloader "grub2" \
+--binary-images iso-hybrid \
+--bootloader "syslinux" \
 --distribution "sid" \
 --iso-volume "$(date +%Y-%m-%d)" \
 --iso-application "Towel Live" \
@@ -24,4 +24,5 @@ lb config noauto \
 --initsystem "sysvinit" \
 --parent-mirror-bootstrap http://ftp.us.debian.org/debian/ \
 --mirror-bootstrap http://ftp.us.debian.org/debian/ \
---parent-mirror-binary http://ftp.us.debian.org/debian/
+--parent-mirror-binary http://ftp.us.debian.org/debian/ \
+--memtest memtest86

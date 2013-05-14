@@ -11,7 +11,6 @@ coreutils
 cu
 eject
 firmware-linux-free
-grub-pc
 kbd
 makedev
 man-db
@@ -21,6 +20,7 @@ psmisc
 rlwrap
 rsyslog
 setserial
+syslinux
 util-linux
 vlock
 
