@@ -1,0 +1,3 @@
+*VT100.allowWindowOps: true
+*VT100.allowTitleOps: true
+*VT100.allowFontOps: true
