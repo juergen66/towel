@@ -55,8 +55,8 @@ zoo
 alsaplayer-text alsaplayer-gtk alsaplayer-alsa alsaplayer-common
 
 # Viewers
-epdfview
 gpicview
+xpdf
 
 # MS Windows
 bkhive samdump2
