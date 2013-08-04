@@ -5,6 +5,12 @@ label live-@FLAVOUR@
 	initrd @INITRD@
 	append @APPEND_LIVE@
 
+label live-@FLAVOUR@
+        menu label Live (^Persistent)
+        linux @LINUX@
+        initrd @INITRD@
+        append @APPEND_LIVE@ persistence
+
 label live-@FLAVOUR@-failsafe
 	menu label Live (^Failsafe)
 	linux @LINUX@
