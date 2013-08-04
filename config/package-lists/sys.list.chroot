@@ -6,6 +6,7 @@ acpid
 apt-utils
 bash
 bash-completion
+busybox-syslogd
 console-common
 coreutils
 cryptsetup-bin
@@ -19,7 +20,6 @@ menu
 mgetty
 psmisc
 rlwrap
-rsyslog
 setserial
 syslinux
 udisks
