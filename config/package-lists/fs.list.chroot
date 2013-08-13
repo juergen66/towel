@@ -47,6 +47,7 @@ mtd-utils
 squashfs-tools
 
 # Partitioning
+gdisk-noicu
 gnu-fdisk
 gpart
 gparted
