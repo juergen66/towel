@@ -1,6 +1,8 @@
 # Debugging
 ht
-radare2
+
+# lua
+lua5.2
 
 # Python
 python

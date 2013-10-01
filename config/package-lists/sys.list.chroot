@@ -17,7 +17,6 @@ kbd
 makedev
 man-db
 menu
-mgetty
 psmisc
 rlwrap
 setserial

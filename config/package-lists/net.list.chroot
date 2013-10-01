@@ -24,6 +24,8 @@ pppoe
 pppoeconf
 proxychains
 ptunnel
+tor
+torsocks
 tsocks
 vpnc
 
@@ -53,7 +55,6 @@ dsniff
 finger
 fping
 httping
-hping3
 icmpinfo
 icmpush
 iperf
