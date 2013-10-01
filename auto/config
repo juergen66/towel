@@ -18,7 +18,7 @@ lb config noauto \
 --linux-flavours "486" \
 --apt-recommends "false" \
 --apt-secure "false" \
---apt-options "--yes --force-yes --auto-remove" \
+--apt-options "--yes --force-yes " \
 --security "false" \
 --win32-loader false \
 --initsystem "sysvinit" \
