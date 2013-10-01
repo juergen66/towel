@@ -13,6 +13,7 @@ update-rc.d -f partimaged remove
 update-rc.d -f rpcbind remove
 update-rc.d -f smartmontools remove
 update-rc.d -f tftpd-hpa remove
+update-rc.d -f tor remove
 update-rc.d -f udftools remove
 update-rc.d -f udhcpd remove
 
