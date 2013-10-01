@@ -8,6 +8,7 @@ set -e
 # Removing unused packages
 UNUSED="info 
     libgl1-mesa-dri
+    logrotate
     mutt
     perl
     python-apt
@@ -18,7 +19,7 @@ UNUSED="info
 
 for PACKAGE in $UNUSED
 do
-	if ! apt-get remove --purge --yes "${PACKAGE}"
+	if ! apt-get --purge --yes remove "${PACKAGE}"
 	then
 		echo "WARNING: ${PACKAGE} isn't installed"
 	fi
@@ -50,4 +51,6 @@ do
 	cat < /dev/null > $FILE
 done
 
-apt-get -y --purge remove aptitude
+apt-get --yes --purge remove aptitude
+apt-get --yes --purge remove aptitude-common
+apt-get --yes --purge autoremove || true
