@@ -17,7 +17,6 @@ smartmontools
 
 # NIC
 ethtool
-mii-diag
 
 # Tape
 mt-st
