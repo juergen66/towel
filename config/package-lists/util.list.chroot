@@ -57,7 +57,6 @@ alsaplayer-text alsaplayer-gtk alsaplayer-alsa alsaplayer-common
 
 # Viewers
 gpicview
-xpdf
 
 # MS Windows
 bkhive samdump2
