@@ -2,14 +2,12 @@
 btrfs-tools
 e2fsprogs
 e2tools
-e2undel
 ext3grep
 ext4magic
 extundelete
 genext2fs
 reiser4progs
 reiserfsprogs
-ufsutils
 
 # Macintosh
 hfsplus
