@@ -92,6 +92,7 @@ traceroute
 telnet
 wbox
 whois
+zenmap
 
 # Pipes
 cryptcat
@@ -99,6 +100,7 @@ netcat
 socat
 
 # Servers
+droopy
 dropbear
 servefile
 udhcpd

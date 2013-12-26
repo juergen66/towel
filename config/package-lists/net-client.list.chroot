@@ -4,6 +4,7 @@ lynx
 openssh-client
 rdesktop
 rsync
+smbclient
 tftp-hpa
 tinyirc
 xvnc4viewer
