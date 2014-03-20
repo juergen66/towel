@@ -1,6 +1,6 @@
 prog "X Terminal" xterm xterm -ls
 prog "Web Browser" iceweasel iceweasel
-prog "Network Settings" netsettings.sh xterm -e /root/bin/netsettings.sh -geom 88x24
+prog "Network Settings" wicd-gtk wicd-gtk
 menu "More XTerms..." folder {
     prog "black on white" xterm xterm -ls -fg black -bg white
     prog "white on black" xterm xterm -ls -fg white -bg black
