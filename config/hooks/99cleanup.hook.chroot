@@ -7,13 +7,8 @@ set -e
 
 # Removing unused packages
 UNUSED="info 
-    libgl1-mesa-dri
     logrotate
-    mutt
     perl
-    python-apt
-    python-reportbug
-    reportbug
     tasksel
 "
 
