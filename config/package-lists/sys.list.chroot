@@ -1,4 +1,6 @@
 # Live System
+live-boot
+live-config
 live-tools
 
 # Basics
@@ -23,7 +25,6 @@ setserial
 syslinux
 udisks
 util-linux
-vlock
 
 # X11
 grun
@@ -35,6 +36,7 @@ xfonts-base
 xserver-xorg
 xterm
 xtermcontrol
+xtrlock
 
 # WMs
 icewm
