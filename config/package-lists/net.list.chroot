@@ -19,19 +19,14 @@ wicd-gtk
 # Connectivity
 6tunnel
 openvpn
-ppp
-pppconfig
-pppoe
-pppoeconf
 proxychains
 ptunnel
 tor
 torsocks
 tsocks
-vpnc
 
 # Packet Capture
-ettercap-graphical
+ettercap-text-only
 netsed
 ngrep
 pcapfix
