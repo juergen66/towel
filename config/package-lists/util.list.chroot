@@ -10,7 +10,6 @@ mc
 reptyr
 screen
 sipcalc
-tmux
 
 # Text
 leafpad
@@ -59,7 +58,7 @@ alsaplayer-text alsaplayer-gtk alsaplayer-alsa alsaplayer-common
 gpicview
 
 # MS Windows
-bkhive samdump2
+samdump2
 chntpw
 reglookup
 
