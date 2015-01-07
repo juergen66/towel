@@ -47,5 +47,4 @@ do
 done
 
 apt-get --yes --purge remove aptitude
-apt-get --yes --purge remove aptitude-common
 apt-get --yes --purge autoremove || true
