@@ -37,7 +37,6 @@ sshfs
 
 # RAID(ish)
 dmsetup
-lvm2
 
 # Other
 archivemount
