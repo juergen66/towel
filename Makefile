@@ -1,9 +1,9 @@
-rebuild: mrclean config build
+rebuild: distclean config build
 
 clean:
 	lb clean
 	
-mrclean:
+distclean:
 	lb clean --purge
 	
 config:
