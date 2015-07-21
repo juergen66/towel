@@ -50,6 +50,7 @@ dnsutils
 dsniff
 finger
 fping
+hping3
 httping
 icmpinfo
 icmpush
@@ -65,6 +66,7 @@ nast
 nbtscan
 netdiscover
 netrw
+netsniff-ng
 nmap
 nstreams
 onesixtyone
