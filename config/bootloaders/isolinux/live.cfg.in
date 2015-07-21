@@ -1,3 +1,6 @@
+title Boot Options
+menu rows 4
+
 label live-@FLAVOUR@
 	menu label ^Live
 	menu default
@@ -5,14 +8,15 @@ label live-@FLAVOUR@
 	initrd @INITRD@
 	append @APPEND_LIVE@
 
-label live-@FLAVOUR@
-        menu label Live (^Persistent)
-        linux @LINUX@
-        initrd @INITRD@
-        append @APPEND_LIVE@ persistence
-
 label live-@FLAVOUR@-failsafe
 	menu label Live (^Failsafe)
 	linux @LINUX@
 	initrd @INITRD@
-	append @APPEND_LIVE_FAILSAFE@ nox11autologin
+	append @APPEND_LIVE_FAILSAFE@
+
+label ---------
+menu disable
+
+label memtest
+	menu label ^memtest86+
+	linux /live/memtest
