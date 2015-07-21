@@ -4,7 +4,6 @@ lb config noauto \
 --clean \
 --debug \
 --cache-stages "bootstrap" \
---bootstrap "debootstrap" \
 --binary-images iso-hybrid \
 --bootloader "syslinux" \
 --distribution "sid" \
@@ -15,7 +14,7 @@ lb config noauto \
 --debian-installer "false" \
 --binary-filesystem "fat32" \
 --architectures "i386" \
---linux-flavours "486" \
+--linux-flavours "586" \
 --apt-recommends "false" \
 --apt-secure "false" \
 --apt-options "--yes --force-yes " \
@@ -25,4 +24,6 @@ lb config noauto \
 --parent-mirror-bootstrap http://ftp.us.debian.org/debian/ \
 --mirror-bootstrap http://ftp.us.debian.org/debian/ \
 --parent-mirror-binary http://ftp.us.debian.org/debian/ \
---memtest memtest86
+--memtest memtest86+ \
+--bootappend-live "boot=live components quiet splash timezone=America/New_York" \
+--bootappend-live-failsafe "boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York"
