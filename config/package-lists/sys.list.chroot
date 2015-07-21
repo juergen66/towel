@@ -23,20 +23,20 @@ psmisc
 rlwrap
 setserial
 syslinux
-udisks
+udisks2
 util-linux
 
 # X11
 grun
 gxmessage
 lxrandr
+suckless-tools
 x11-utils
 xinit
 xfonts-base
 xserver-xorg
 xterm
 xtermcontrol
-xtrlock
 
 # WMs
 icewm
