@@ -33,13 +33,6 @@ rm -rf /usr/share/i18n/*
 rm -rf /usr/share/info/*
 rm -rf /var/cache/man/*
 
-# Cleaning apt
-rm -rf /var/lib/apt/lists
-mkdir -p /var/lib/apt/lists/partial
-
-rm /var/cache/apt/pkgcache.bin
-rm /var/cache/apt/srcpkgcache.bin
-
 # Truncating logs
 for FILE in $(find /var/log/ -type f)
 do
@@ -48,3 +41,10 @@ done
 
 apt-get --yes --purge remove aptitude
 apt-get --yes --purge autoremove || true
+
+# Cleaning apt
+rm -rf /var/lib/apt/lists
+mkdir -p /var/lib/apt/lists/partial
+
+rm /var/cache/apt/pkgcache.bin
+rm /var/cache/apt/srcpkgcache.bin
