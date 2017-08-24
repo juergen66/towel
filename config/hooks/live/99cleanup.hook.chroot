@@ -8,7 +8,6 @@ set -e
 # Removing unused packages
 UNUSED="info 
     logrotate
-    perl
     tasksel
 "
 
