@@ -2,5 +2,5 @@
 # Remove locales
 # # (this could remove other applications. add "-y" if your are
 # confident)
-apt-get remove locales -y --purge
- echo "don t fail on abort (set ERRORLEVEL to zero)" > /dev/null
+#apt-get remove locales -y --purge
+echo "don t fail on abort (set ERRORLEVEL to zero)" > /dev/null
