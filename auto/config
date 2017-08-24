@@ -14,10 +14,10 @@ lb config noauto \
 --debian-installer "false" \
 --binary-filesystem "fat32" \
 --architectures "i386" \
---linux-flavours "586" \
+--linux-flavours "686" \
 --apt-recommends "false" \
 --apt-secure "false" \
---apt-options "--yes --force-yes " \
+--apt-options "--yes " \
 --security "false" \
 --win32-loader false \
 --initsystem "systemd" \
