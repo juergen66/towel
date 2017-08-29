@@ -17,5 +17,11 @@ then
     . /usr/local/etc/rc.local
 fi
 
+# AUTOEXEC.BAT in the root of the live medium is also executed:
+if [ -e /lib/live/mount/medium/AUTOEXEC.BAT ]
+then
+    . /lib/live/mount/medium/AUTOEXEC.BAT
+fi
+
 exit 0
 
