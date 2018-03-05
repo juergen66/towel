@@ -34,13 +34,13 @@ class Installer:
         The partition must be (V)FAT formatted and bootable.
         """
 
-        parser = argparse.ArgumentParser( description = desc,
-                                          epilog = details )
+        parser = argparse.ArgumentParser(description=desc,
+                                         epilog=details)
         parser.add_argument("partition", help="the target partition")
-        parser.add_argument("-v", "--verbose", 
+        parser.add_argument("-v", "--verbose",
                             help="increase output verbosity",
                             action="store_true")
-        parser.add_argument("-y", "--yes", 
+        parser.add_argument("-y", "--yes",
                             help="do not ask for confirmation",
                             action="store_true")
         args = parser.parse_args()
@@ -72,9 +72,9 @@ class Installer:
         """
         args = []
         opts = ['-a', '--delete']
-        
+
         if self.verbose == True:
-            opts.append('-v')       
+            opts.append('-v')
 
         args.append("rsync")
         args.extend(opts)
@@ -88,16 +88,16 @@ class Installer:
         """
         source = "/lib/live/mount/medium"
         target = tempfile.mkdtemp()
-    
+
         subprocess.call(["mount", self.partition, target])
         self.rsync(source + "/live/",
-              target + "/live/")
+                   target + "/live/")
         self.rsync(source + "/md5sum.txt",
-              target + "/md5sum.txt")
-        self.rsync(source + "/isolinux/",  
-              target + "/syslinux/")
-        self.rsync(source + "/isolinux/isolinux.cfg",  
-              target + "/syslinux/syslinux.cfg")
+                   target + "/md5sum.txt")
+        self.rsync(source + "/isolinux/",
+                   target + "/syslinux/")
+        self.rsync(source + "/isolinux/isolinux.cfg",
+                   target + "/syslinux/syslinux.cfg")
         subprocess.call(["syslinux", "--install", self.partition])
         subprocess.call(["umount", self.partition])
         os.rmdir(target)
@@ -110,6 +110,6 @@ class Installer:
             self.warn()
         self.copy()
 
-if (__name__ == '__main__'):
+if __name__ == '__main__':
     INST = Installer()
     INST.run()
