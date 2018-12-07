@@ -5,7 +5,7 @@ lb config noauto \
 --debug \
 --cache-stages "bootstrap" \
 --binary-images iso-hybrid \
---bootloader "syslinux" \
+--bootloaders "syslinux,grub-efi" \
 --distribution "sid" \
 --iso-volume "$(date +%Y-%m-%d)" \
 --iso-application "Towel Live" \
