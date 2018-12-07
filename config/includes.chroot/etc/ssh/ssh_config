@@ -4,4 +4,9 @@ Host *
   HashKnownHosts no
   GSSAPIAuthentication yes
   GSSAPIDelegateCredentials no
+  # These options allow connections to outdated SSH servers.
+  # Not a good idea in general, but important sometimes when
+  # you have to connect to old servers.
+  #HostKeyAlgorithms=+ssh-dss
+  #Ciphers=+aes128-cbc,3des-cbc
 
