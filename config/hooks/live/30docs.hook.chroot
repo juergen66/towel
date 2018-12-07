@@ -15,6 +15,7 @@ linux-wlan-ng-doc
 live-boot
 live-config
 netsed
+python-impacket
 python-pexpect
 testdisk
 "
