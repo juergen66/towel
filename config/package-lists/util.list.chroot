@@ -7,15 +7,17 @@ debootstrap
 file
 ipv6calc
 mc
+patch
 reptyr
 screen
 sipcalc
+tmux
 
 # Text
 leafpad
 less
-nvi
 tofrodos
+vim
 
 # Serial
 gkermit
@@ -25,6 +27,13 @@ minicom
 
 # Encryption
 tcplay
+
+# GPG
+dirmngr
+gpg
+gpg-agent
+pinentry-gtk2
+scdaemon
 
 # Scripting
 pv
@@ -49,12 +58,12 @@ unace
 unrar-free
 unzip
 zip
-zoo
 
 # Sound
 alsaplayer-text alsaplayer-gtk alsaplayer-alsa alsaplayer-common
 
 # Viewers
+feh
 gpicview
 
 # MS Windows
