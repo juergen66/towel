@@ -2,6 +2,7 @@
 cmospwd
 
 # File System
+binwalk
 foremost
 scalpel
 testdisk
@@ -11,7 +12,6 @@ safecopy
 # Mail
 mboxgrep
 pst-utils
-readpst
 tnef
 
 # Windows
