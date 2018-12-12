@@ -1,5 +1,9 @@
+# Basics
+make
+
 # Debugging
 ht
+radare2
 
 # lua
 lua5.2
@@ -7,5 +11,6 @@ lua5.2
 # Python
 python
 ipython
+python-impacket
 python-pexpect
 python-scapy
