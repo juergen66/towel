@@ -1,5 +1,5 @@
 # UNIX/Linux
-btrfs-tools
+btrfs-progs
 e2fsprogs
 e2tools
 ext3grep
@@ -44,7 +44,7 @@ mtd-utils
 squashfs-tools
 
 # Partitioning
-gnu-fdisk
+fdisk
 gdisk
 gpart
 gparted
