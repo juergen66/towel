@@ -5,7 +5,7 @@ ebtables
 ifupdown
 net-tools
 iptables
-iproute
+iproute2
 macchanger
 openssl
 curl
@@ -64,6 +64,7 @@ mtr
 mz
 nast
 nbtscan
+ndiff
 netdiscover
 netrw
 netsniff-ng
@@ -78,7 +79,6 @@ packit
 paris-traceroute
 reaver
 ssldump
-sslscan
 smb-nat
 snmp
 tcpdump
@@ -89,10 +89,12 @@ traceroute
 telnet
 wbox
 whois
+wuzz
 zenmap
 
 # Pipes
 cryptcat
+ncat
 netcat
 socat
 
@@ -105,7 +107,7 @@ tftpd-hpa
 
 # WiFi
 aircrack-ng
-hostap-utils
+#hostap-utils
 iw
 wireless-tools
 wpasupplicant
