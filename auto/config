@@ -25,6 +25,6 @@ lb config noauto \
 --mirror-bootstrap http://ftp.us.debian.org/debian/ \
 --parent-mirror-binary http://ftp.us.debian.org/debian/ \
 --memtest memtest86+ \
---bootappend-live "boot=live components quiet splash timezone=America/New_York" \
+--bootappend-live "boot=live components timezone=America/New_York" \
 --bootappend-live-failsafe "boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York"
 
