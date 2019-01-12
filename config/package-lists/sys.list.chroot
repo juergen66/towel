@@ -5,10 +5,12 @@ live-tools
 
 # Basics
 acpid
+acpi-support
+acpitool
 apt-utils
 bash
 bash-completion
-busybox-syslogd
+busybox-static
 console-common
 coreutils
 cryptsetup-bin
@@ -16,19 +18,21 @@ cu
 eject
 firmware-linux-free
 kbd
+locales
 makedev
 man-db
 menu
+physlock
 psmisc
 rlwrap
 setserial
-syslinux
-udisks2
 util-linux
 
+# Boot
+grub-pc
+syslinux
+
 # X11
-grun
-gxmessage
 lxrandr
 suckless-tools
 x11-utils
@@ -39,8 +43,9 @@ xterm
 xtermcontrol
 
 # WMs
+awesome
+awesome-extra
 icewm
 
 # Sound
-alsa-base
 alsa-utils
