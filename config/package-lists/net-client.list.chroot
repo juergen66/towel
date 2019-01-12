@@ -1,10 +1,12 @@
 ftp
-iceweasel
+firefox
+freerdp2-x11
 lynx
 openssh-client
 rdesktop
 rsync
 smbclient
+swaks
 tftp-hpa
 tinyirc
 xvnc4viewer
