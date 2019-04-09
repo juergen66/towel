@@ -11,3 +11,7 @@ config:
 
 build:
 	lb build
+
+test:
+	sudo qemu-system-i386 -m 1024 -cdrom live-image-i386.hybrid.iso
+
