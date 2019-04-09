@@ -28,13 +28,6 @@ minicom
 # Encryption
 tcplay
 
-# GPG
-dirmngr
-gpg
-gpg-agent
-pinentry-gtk2
-scdaemon
-
 # Scripting
 pv
 pyp
