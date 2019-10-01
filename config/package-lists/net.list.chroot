@@ -38,7 +38,7 @@ tcpslice
 tcpxtract
 wireshark-common
 tshark
-wireshark
+wireshark-gtk
 
 # Scanning/Probing/Debugging
 4g8
@@ -50,7 +50,6 @@ dnsutils
 dsniff
 finger
 fping
-hping3
 httping
 icmpinfo
 icmpush
