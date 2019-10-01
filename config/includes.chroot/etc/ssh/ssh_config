@@ -9,4 +9,5 @@ Host *
   # you have to connect to old servers.
   #HostKeyAlgorithms=+ssh-dss
   #Ciphers=+aes128-cbc,3des-cbc
+  #KexAlgorithms=+diffie-hellman-group1-sha1
 
