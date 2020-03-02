@@ -14,11 +14,11 @@ label live-@FLAVOUR@-icewm
 	initrd @INITRD@
 	append @APPEND_LIVE@ wm=icewm
 
-label live-586-failsafe
+label live-@FLAVOUR@-failsafe
 	menu label Live ^Failsafe (No GUI)
 	linux /live/vmlinuz
 	initrd /live/initrd.img
-	append boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
+	append boot=live components noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
 
 label ---------
 menu disable

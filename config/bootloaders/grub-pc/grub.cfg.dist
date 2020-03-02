@@ -33,7 +33,7 @@ menuentry "Live system" {
 	initrd	/live/initrd.img-4.16.0-1-686
 }
 menuentry "Live system (fail-safe mode)" {
-	linux	/live/vmlinuz-4.16.0-1-686 boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
+	linux	/live/vmlinuz-4.16.0-1-686 boot=live components noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
 	initrd	/live/initrd.img-4.16.0-1-686
 }
 
