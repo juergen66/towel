@@ -39,7 +39,6 @@ sshfs
 dmsetup
 
 # Other
-archivemount
 mtd-utils
 squashfs-tools
 
