@@ -29,7 +29,10 @@ setserial
 util-linux
 
 # Boot
+efibootmgr
+grub-efi-amd64-signed
 grub-pc
+shim-signed
 syslinux
 
 # X11
