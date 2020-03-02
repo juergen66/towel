@@ -34,7 +34,7 @@ rsync -a ${source}  ${target}
 
 rm -rf ${target}/isolinux/
 
-grub-install --root-directory=${target} ${DRIVE}
+grub-install --target=i386-pc --root-directory=${target} ${DRIVE}
 
 umount ${target}
 rmdir  ${target}
