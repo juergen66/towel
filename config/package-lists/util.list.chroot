@@ -14,6 +14,7 @@ sipcalc
 tmux
 
 # Text
+gawk
 less
 tofrodos
 vim
