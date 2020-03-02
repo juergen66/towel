@@ -13,8 +13,7 @@ lb config noauto \
 --iso-volume "towel-$(date +%m%d%Y)" \
 --debian-installer "false" \
 --binary-filesystem "fat32" \
---architectures "i386" \
---linux-flavours "686" \
+--architectures "amd64" \
 --apt-recommends "false" \
 --apt-secure "false" \
 --apt-options "--yes " \
