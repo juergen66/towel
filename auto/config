@@ -5,7 +5,6 @@ lb config noauto \
 --debug \
 --cache-stages "bootstrap" \
 --binary-images iso-hybrid \
---bootloaders "syslinux,grub-efi" \
 --distribution "sid" \
 --iso-volume "$(date +%Y-%m-%d)" \
 --iso-application "Towel Live" \
@@ -25,5 +24,6 @@ lb config noauto \
 --parent-mirror-binary http://ftp.us.debian.org/debian/ \
 --memtest memtest86+ \
 --bootappend-live "boot=live components timezone=America/New_York" \
---bootappend-live-failsafe "boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York"
+--bootappend-live-failsafe "boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York" \
+--bootloaders "syslinux,grub-efi" 
 
