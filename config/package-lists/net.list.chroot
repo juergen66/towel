@@ -104,7 +104,6 @@ tftpd-hpa
 
 # WiFi
 aircrack-ng
-#hostap-utils
 iw
 wireless-tools
 wpasupplicant
