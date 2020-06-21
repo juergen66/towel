@@ -9,8 +9,8 @@ radare2
 lua5.2
 
 # Python
-python
-ipython
-python-impacket
-python-pexpect
-python-scapy
+python3
+ipython3
+python3-impacket
+python3-pexpect
+python3-scapy
