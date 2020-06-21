@@ -11,10 +11,7 @@ openssl
 curl
 netwox
 ntpdate
-wicd-daemon
-wicd-cli
-wicd-curses
-wicd-gtk
+network-manager
 
 # Connectivity
 6tunnel
