@@ -45,10 +45,9 @@ xserver-xorg
 xterm
 xtermcontrol
 
-# WMs
+# WM
 awesome
 awesome-extra
-icewm
 
 # Sound
 alsa-utils
