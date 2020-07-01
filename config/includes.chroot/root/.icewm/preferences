@@ -1,6 +1,0 @@
-ShowMoveSizeStatus = 1
-LockCommand = "/usr/bin/slock"
-ShutdownCommand="/sbin/halt"
-RebootCommand="/sbin/reboot"
-TaskBarShowMailboxStatus = 0
-TaskBarShowWorkspaces = 0
