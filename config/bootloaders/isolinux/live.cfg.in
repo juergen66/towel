@@ -1,21 +1,21 @@
 title Boot Options
 menu rows 5
 
-label live-@FLAVOUR@-awesome
-	menu label Live System   (^Awesome WM)
+label live-@FLAVOUR@
+	menu label ^Live System
 	menu default
 	linux @LINUX@
 	initrd @INITRD@
-	append @APPEND_LIVE@ wm=awesome
+	append @APPEND_LIVE@
 
-label live-@FLAVOUR@-icewm
-	menu label Live System   (^IceWM)
+label live-@FLAVOUR@-RAM
+	menu label Live from ^RAM
 	linux @LINUX@
 	initrd @INITRD@
-	append @APPEND_LIVE@ wm=icewm
+	append @APPEND_LIVE@ toram
 
 label live-@FLAVOUR@-failsafe
-	menu label Live ^Failsafe (No GUI)
+	menu label Live ^Failsafe
 	linux /live/vmlinuz
 	initrd /live/initrd.img
 	append boot=live components noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
