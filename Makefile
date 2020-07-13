@@ -1,4 +1,4 @@
-rebuild: distclean config build
+rebuild: distclean prepare config build
 
 clean:
 	sudo lb clean
@@ -6,8 +6,10 @@ clean:
 distclean:
 	sudo lb clean --purge
 	
+prepare:
+	cp -Lvn /usr/share/live/build/bootloaders/isolinux/* config/bootloaders/isolinux/
 config:
-	sudo lb config
+	lb config
 
 build:
 	sudo lb build
