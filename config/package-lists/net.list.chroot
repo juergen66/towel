@@ -12,6 +12,7 @@ curl
 netwox
 ntpdate
 network-manager
+resolvconf
 
 # Connectivity
 6tunnel
@@ -21,6 +22,8 @@ ptunnel
 tor
 torsocks
 tsocks
+wireguard
+wireguard-tools 
 
 # Packet Capture
 ettercap-text-only
