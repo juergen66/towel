@@ -3,20 +3,12 @@
 mkdir /tmp/doc/
 
 KEEP_DOCS="
-acpid
 bash-completion
-bridge-utils
-hostap-utils
 hping3
-icewm-common
 iw
-john
-linux-wlan-ng-doc
 live-boot
 live-config
 netsed
-python-impacket
-python-pexpect
 testdisk
 "
 
