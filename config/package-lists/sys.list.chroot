@@ -16,6 +16,7 @@ coreutils
 cryptsetup-bin
 cu
 eject
+fdisk
 firmware-linux-free
 kbd
 locales
@@ -41,13 +42,13 @@ suckless-tools
 x11-utils
 xinit
 xfonts-base
+xsecurelock
 xserver-xorg
 xterm
 xtermcontrol
 
 # WM
-awesome
-awesome-extra
+icewm
 
 # Sound
 alsa-utils
