@@ -98,7 +98,7 @@ socat
 # Servers
 droopy
 dropbear
-servefile
+#servefile
 udhcpd
 tftpd-hpa
 
