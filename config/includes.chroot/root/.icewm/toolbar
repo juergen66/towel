@@ -1,0 +1,2 @@
+prog XTerm xterm x-terminal-emulator
+prog    "WWW" ! x-www-browser

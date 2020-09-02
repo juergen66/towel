@@ -1,0 +1,23 @@
+menu "Network" folder {
+prog "Firefox" firefox /usr/lib/firefox/firefox
+prog "PackETH" - packeth
+prog "Wireshark" wireshark wireshark
+}
+
+menu "Settings" folder {
+prog "Monitor Settings" video-display lxrandr
+}
+
+menu "System" folder {
+prog "GParted Partition Editor" gparted /usr/sbin/gparted
+prog "Hardware Locality lstopo" - lstopo
+prog "UXTerm" mini.xterm uxterm
+prog "XTerm" mini.xterm xterm
+}
+
+menu "Utility" folder {
+prog "Image Viewer" gpicview gpicview
+prog "Midnight Commander" MidnightCommander x-terminal-emulator -e mc
+prog "Serial port terminal" gtkterm gtkterm
+prog "Vim" gvim x-terminal-emulator -e vim
+}
