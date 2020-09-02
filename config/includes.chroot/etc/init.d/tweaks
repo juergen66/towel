@@ -18,6 +18,7 @@ case "$1" in
         log_action_begin_msg "Runtime tweaks to the live environment"
         ldconfig
 	touch /var/lib/misc/udhcpd.leases
+	ln -sf /run/resolvconf/resolv.conf /etc/resolv.conf
 	mkdir -p /mnt/tmp/
         log_action_end_msg $RETVAL
         ;;
