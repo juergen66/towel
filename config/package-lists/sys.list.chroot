@@ -35,6 +35,7 @@ grub-efi-amd64-signed
 grub-pc
 shim-signed
 syslinux
+syslinux-common
 
 # X11
 lxrandr
