@@ -20,3 +20,5 @@ uefi-test:
 legacy-test:
 	qemu-system-x86_64 -m 1024 -cdrom live-image-amd64.hybrid.iso -bios /usr/share/seabios/bios.bin
 
+clone:
+	git clone https://github.com/juergen66/towel.git
