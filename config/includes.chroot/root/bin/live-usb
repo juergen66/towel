@@ -1,40 +1,215 @@
-#!/bin/sh
+#!/bin/bash
 
-echo ''
-echo '***************************************************'
-echo '*** FOR THE SAKE OF ALL THAT IS GOOD AND SANE,  ***'
-echo '*** PLEASE EDIT ME CAREFULLY BEFORE RUNNING ME! ***'
-echo '***************************************************'
-echo ''
-exit 42
+set -euo pipefail
 
-# This should be the only variable that needs to be edited
-# Everything on this drive will be utterly annihilated!!!!
-DRIVE=/dev/sdX
+VERB=1
 
-set -x
+info() {
+  if [[ "$VERB" -gt 0 ]]
+  then
+    echo "$*"
+  fi
+}
 
-source="/run/live/medium/"
-target=$(mktemp -d /tmp/live-usb.XXXXX)/
-part=${DRIVE}1
+critical() {
+  echo "CRITICAL: $*"
+  exit 1
+}
 
-parted -s ${DRIVE} mktable msdos
-parted -s ${DRIVE} mkpart primary fat32 0% 100%
-parted -s ${DRIVE} set 1 boot on
+# From https://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias
+sure() {
+read -r -p "Are you sure? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+  return 0
+else
+  return 1
+fi
+}
 
-sync
+usage() {
+  cat <<EOT
+Usage: $0 [options] DEST
 
-mkfs.vfat ${part}
+Install the live system on (USB) drive DEST.
 
-sync
+Options:
+    -s SOURCE    Copy system from SOURCE directory
+                   Defaults to /run/live/medium/
+    -g           Install the GRUB boot loader
+    -f           Format the target partition
+                   Implies -g
+    -p           Partition the target drive
+                   Implies -f and -g
+    -q           Quiet: Print only summary and errors
+    -d           Debug: Print large amounts of information
+    -Y           Do not ask for confirmation
+    -h           Print this text and exit
 
-mount ${part} ${target}
+EOT
+}
 
-rsync -a ${source}  ${target}
+# $1 source directory
+# $2 destination drive
+sanity () {
+  info Sanity check...
+  [[ -d "$1" ]] || critical "Source directory $1 doesn't exist!"
+  [[ -b "$2" ]] || critical "Destination $2 is not a block device!"
+}
 
-rm -rf ${target}/isolinux/
+# $1: drive to work on
+partition() {
+  info Partitioning "$1"...
+  parted -s "$1" mktable msdos || return 2
+  parted -s "$1" mkpart primary fat32 0% 100% || return 3
+  parted -s "$1" set 1 boot on || return 4
+  sync
+}
 
-grub-install --target=i386-pc --root-directory=${target} ${DRIVE}
+# $1: partition to work on
+format() {
+  info Formatting "$1"...
+  mkfs.vfat "$1" || return 5
+  sync
+}
 
-umount ${target}
-rmdir  ${target}
+# $1: source directory
+# $2: destination directory
+copy() {
+  info Copying system from "$1" to "$2"...
+  rsync_opts=""
+  if [[ $VERB -gt 0 ]]
+  then
+    rsync_opts="--info=progress2"
+  fi
+  rsync --recursive $rsync_opts  "$1" "$2" || return 6
+  rm -rf "$2/isolinux/" || return 7
+}
+
+# $1 destination drive
+# $2 destination directory
+grub() {
+  info Installing GRUB on "$1"...
+  grub-install --target=i386-pc --root-directory="$2" "$1" || return 8
+}
+
+dest=
+src="/run/live/medium/"
+want_partition=0
+want_format=0
+want_grub=0
+confirm=1
+
+
+while getopts "pfghqdsY:" opt
+do
+  case ${opt} in
+    h ) usage
+        exit 0
+      ;;
+    s ) src=$OPTARG
+      ;;
+    p ) want_partition=1
+	want_format=1
+        want_grub=1
+      ;;
+    f ) want_format=1
+        want_grub=1
+      ;;
+    g ) want_grub=1
+      ;;
+    q ) VERB=0
+      ;;
+    d ) VERB=2
+      ;;
+    Y ) confirm=0
+      ;;
+    \? ) usage
+         exit 1
+      ;;
+  esac
+done
+
+shift $(( OPTIND - 1 ))
+
+dest=$1
+if [[ -z "$dest" ]]
+then
+  >&2 echo "No destination specified!"
+  >&2 usage
+  exit 1
+fi
+part="$dest"1
+
+src=$(echo "$src"/ | sed 's|//|/|g')
+
+sanity "$src" "$dest"
+
+cat <<EOT  
+
+   ***SUMMARY ***
+
+Source:        $src
+Destination:   $dest
+
+EOT
+
+if [[ "$want_partition" == 1 ]]
+then
+  echo "  $dest will be partitioned."
+else
+  echo "  $dest will not be partitioned."
+fi
+
+if [[ "$want_format" == 1 ]]
+then
+  echo "  $part will be formatted."
+else
+  echo "  $part will not be formatted."
+fi
+
+if [[ "$want_grub" == 1 ]]
+then
+  echo "  GRUB will be installed on $dest."
+else
+  echo "  GRUB will not be installed."
+fi
+
+cat <<EOT
+
+EOT
+[[ $confirm -eq 0 ]] ||  sure || exit 0
+
+if [[ "$VERB" -gt 1 ]]
+then 
+  set -x
+fi
+
+mount=$(mktemp -d /tmp/live-usb.XXXXX)/
+
+if [[ "$want_partition" == 1 ]]
+then
+	partition "$dest" || exit $?
+fi
+
+if [[ "$want_format" == 1 ]]
+then
+	format "$part" || exit $?
+fi
+
+mount "$part" "$mount" || exit 1
+
+copy "$src" "$mount" || exit $?
+
+if [[ "$want_grub" == 1 ]]
+then
+  grub "$dest" "$mount" || exit $? 
+fi
+
+info Cleaning up...
+umount "$mount" || exit 1
+rmdir  "$mount" || exit 1
+
+info Done.
+
+# vim:filetype=sh
