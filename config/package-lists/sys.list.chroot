@@ -4,9 +4,6 @@ live-config
 live-tools
 
 # Basics
-acpid
-acpi-support
-acpitool
 apt-utils
 bash
 bash-completion
@@ -38,15 +35,12 @@ syslinux
 syslinux-common
 
 # X11
-lxrandr
 suckless-tools
 x11-utils
 xinit
 xfonts-base
-xsecurelock
 xserver-xorg
 xterm
-xtermcontrol
 
 # WM
 icewm
