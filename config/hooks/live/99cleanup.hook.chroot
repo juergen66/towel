@@ -9,6 +9,7 @@ set -e
 UNUSED="info 
     logrotate
     tasksel
+    cpp-10
 "
 
 for PACKAGE in $UNUSED
