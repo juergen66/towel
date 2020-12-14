@@ -1,2 +1,2 @@
-prog XTerm xterm x-terminal-emulator
+prog Terminal xterm sakura -t Terminal
 prog    "WWW" ! x-www-browser

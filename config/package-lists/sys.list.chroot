@@ -35,12 +35,12 @@ syslinux
 syslinux-common
 
 # X11
+sakura
 suckless-tools
 x11-utils
 xinit
 xfonts-base
 xserver-xorg
-xterm
 
 # WM
 icewm
