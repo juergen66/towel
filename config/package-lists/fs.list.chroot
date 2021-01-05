@@ -9,11 +9,6 @@ genext2fs
 reiser4progs
 reiserfsprogs
 
-# Macintosh
-hfsplus
-hfsprogs
-hfsutils
-
 # DOS/Windows
 dosfstools
 fatattr
