@@ -101,7 +101,7 @@ want_grub=0
 confirm=1
 
 
-while getopts "pfghqdsY:" opt
+while getopts "pfghqdYs:" opt
 do
   case ${opt} in
     h ) usage
@@ -132,7 +132,7 @@ done
 
 shift $(( OPTIND - 1 ))
 
-dest=$1
+dest=${1:-}
 if [[ -z "$dest" ]]
 then
   >&2 echo "No destination specified!"
