@@ -1,11 +1,11 @@
 #!/bin/bash
 
-set -euo pipefail
+set -Eeuo pipefail
 
 VERB=1
 
 info() {
-  if [[ "$VERB" -gt 0 ]]
+  if [[ "${VERB}" -gt 0 ]]
   then
     echo "$*"
   fi
@@ -19,7 +19,7 @@ critical() {
 # From https://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias
 sure() {
 read -r -p "Are you sure? [y/N] " response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+if [[ "${response}" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
   return 0
 else
@@ -78,11 +78,11 @@ format() {
 copy() {
   info Copying system from "$1" to "$2"...
   rsync_opts=""
-  if [[ $VERB -gt 0 ]]
+  if [[ ${VERB} -gt 0 ]]
   then
     rsync_opts="--info=progress2"
   fi
-  rsync --recursive $rsync_opts  "$1" "$2" || return 6
+  rsync --recursive "${rsync_opts}"  "$1" "$2" || return 6
   rm -rf "$2/isolinux/" || return 7
 }
 
@@ -100,14 +100,13 @@ want_format=0
 want_grub=0
 confirm=1
 
-
 while getopts "pfghqdYs:" opt
 do
   case ${opt} in
     h ) usage
         exit 0
       ;;
-    s ) src=$OPTARG
+    s ) src=${OPTARG}
       ;;
     p ) want_partition=1
 	want_format=1
@@ -124,8 +123,8 @@ do
       ;;
     Y ) confirm=0
       ;;
-    \? ) usage
-         exit 1
+    * ) usage
+        exit 1
       ;;
   esac
 done
@@ -133,44 +132,44 @@ done
 shift $(( OPTIND - 1 ))
 
 dest=${1:-}
-if [[ -z "$dest" ]]
+if [[ -z "${dest}" ]]
 then
   >&2 echo "No destination specified!"
   >&2 usage
   exit 1
 fi
-part="$dest"1
+part="${dest}"1
 
-src=$(echo "$src"/ | sed 's|//|/|g')
+src=$(echo "${src}"/ | sed 's|//|/|g')
 
-sanity "$src" "$dest"
+sanity "${src}" "${dest}"
 
 cat <<EOT  
 
    ***SUMMARY ***
 
-Source:        $src
-Destination:   $dest
+Source:        ${src}
+Destination:   ${dest}
 
 EOT
 
-if [[ "$want_partition" == 1 ]]
+if [[ "${want_partition}" == 1 ]]
 then
-  echo "  $dest will be partitioned."
+  echo "  ${dest} will be partitioned."
 else
-  echo "  $dest will not be partitioned."
+  echo "  ${dest} will not be partitioned."
 fi
 
-if [[ "$want_format" == 1 ]]
+if [[ "${want_format}" == 1 ]]
 then
-  echo "  $part will be formatted."
+  echo "  ${part} will be formatted."
 else
-  echo "  $part will not be formatted."
+  echo "  ${part} will not be formatted."
 fi
 
-if [[ "$want_grub" == 1 ]]
+if [[ "${want_grub}" == 1 ]]
 then
-  echo "  GRUB will be installed on $dest."
+  echo "  GRUB will be installed on ${dest}."
 else
   echo "  GRUB will not be installed."
 fi
@@ -178,37 +177,37 @@ fi
 cat <<EOT
 
 EOT
-[[ $confirm -eq 0 ]] ||  sure || exit 0
+[[ ${confirm} -eq 0 ]] ||  sure || exit 0
 
-if [[ "$VERB" -gt 1 ]]
+if [[ "${VERB}" -gt 1 ]]
 then 
   set -x
 fi
 
 mount=$(mktemp -d /tmp/live-usb.XXXXX)/
 
-if [[ "$want_partition" == 1 ]]
+if [[ "${want_partition}" == 1 ]]
 then
-	partition "$dest" || exit $?
+	partition "${dest}" || exit $?
 fi
 
-if [[ "$want_format" == 1 ]]
+if [[ "${want_format}" == 1 ]]
 then
-	format "$part" || exit $?
+	format "${part}" || exit $?
 fi
 
-mount "$part" "$mount" || exit 1
+mount "${part}" "${mount}" || exit 1
 
-copy "$src" "$mount" || exit $?
+copy "${src}" "${mount}" || exit $?
 
-if [[ "$want_grub" == 1 ]]
+if [[ "${want_grub}" == 1 ]]
 then
-  grub "$dest" "$mount" || exit $? 
+  grub "${dest}" "${mount}" || exit $? 
 fi
 
 info Cleaning up...
-umount "$mount" || exit 1
-rmdir  "$mount" || exit 1
+umount "${mount}" || exit 1
+rmdir  "${mount}" || exit 1
 
 info Done.
 
