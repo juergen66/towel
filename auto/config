@@ -1,19 +1,20 @@
 #!/bin/sh
 
 lb config noauto \
+--architectures "${LB_ARCH}" \
 --clean \
 --debug \
 --cache-stages "bootstrap" \
 --binary-images iso-hybrid \
 --distribution "sid" \
 --iso-volume "$(date +%Y-%m-%d)" \
---iso-application "Towel Live" \
+--iso-application "towel" \
 --iso-publisher "Juergen Fiedler - juergen.fiedler@gmail.com" \
 --iso-volume "towel-$(date +%m%d%Y)" \
---debian-installer "false" \
+--debian-installer "none" \
 --binary-filesystem "fat32" \
---architectures "amd64" \
 --apt-recommends "false" \
+--apt-indices "false" \
 --apt-secure "false" \
 --apt-options "--yes " \
 --security "false" \
