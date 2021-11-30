@@ -91,7 +91,7 @@ wuzz
 # Pipes
 cryptcat
 ncat
-netcat
+netcat-openbsd
 socat
 
 # Servers
