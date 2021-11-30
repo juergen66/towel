@@ -40,7 +40,7 @@ syslinux
 syslinux-common
 
 # X11
-sakura
+xterm
 suckless-tools
 x11-utils
 xinit

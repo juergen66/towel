@@ -1,2 +1,2 @@
-prog Terminal xterm sakura -t Terminal
+prog Terminal xterm xterm
 prog    "WWW" ! x-www-browser
