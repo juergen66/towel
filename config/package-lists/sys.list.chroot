@@ -28,8 +28,13 @@ util-linux
 
 # Boot
 efibootmgr
-grub-efi-amd64-signed
 grub-pc
+#if ARCHITECTURES amd64
+  grub-efi-amd64-signed
+#endif
+#if ARCHITECTURES i386
+  grub-efi-ia32-signed
+#endif
 shim-signed
 syslinux
 syslinux-common
