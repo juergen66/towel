@@ -2,5 +2,7 @@
 " cut and paste from other applications
 set mouse=n
 set modeline
-syntax enable
 colorscheme darkblue
+syntax on
+filetype indent plugin on
+
