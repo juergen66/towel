@@ -17,7 +17,7 @@ distclean:
 	
 prepare:
 	cp -Lvn /usr/share/live/build/bootloaders/isolinux/* config/bootloaders/isolinux/
-	mkdir -p iso
+	mkdir -p ../ISO
 
 config32:
 	LB_ARCH=i386 lb config
@@ -27,23 +27,23 @@ config64:
 
 build32: config32 prepare
 	lb build
-	mv live-image-i386.hybrid.iso iso/
+	mv live-image-i386.hybrid.iso ../ISO/
 
 build64: config64 prepare
 	lb build
-	mv live-image-amd64.hybrid.iso iso/
+	mv live-image-amd64.hybrid.iso ../ISO/
 
 uefi-test32:
-	qemu-system-i386 -m 1024 -cdrom iso/live-image-i386.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
+	qemu-system-i386 -m 1024 -cdrom ../ISO/live-image-i386.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
 
 legacy-test32:
-	qemu-system-i386 -m 1024 -cdrom iso/live-image-i386.hybrid.iso -bios /usr/share/seabios/bios.bin
+	qemu-system-i386 -m 1024 -cdrom ../ISO/live-image-i386.hybrid.iso -bios /usr/share/seabios/bios.bin
 
 uefi-test64:
-	qemu-system-x86_64 -m 1024 -cdrom iso/live-image-amd64.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
+	qemu-system-x86_64 -m 1024 -cdrom ../ISO/live-image-amd64.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
 
 legacy-test64:
-	qemu-system-x86_64 -m 1024 -cdrom iso/live-image-amd64.hybrid.iso -bios /usr/share/seabios/bios.bin
+	qemu-system-x86_64 -m 1024 -cdrom ../ISO/live-image-amd64.hybrid.iso -bios /usr/share/seabios/bios.bin
 
 clone:
 	git clone https://github.com/juergen66/towel.git
