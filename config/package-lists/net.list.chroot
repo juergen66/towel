@@ -1,10 +1,8 @@
 # General
 bridge-utils
 isc-dhcp-client
-ebtables
 ifupdown
 net-tools
-iptables
 iproute2
 macchanger
 openssl
