@@ -9,19 +9,31 @@
 # In order to enable or disable this script just change the execution
 # bits.
 
+# copy files from the /include/ directory on live medium
+if [ -d /run/live/medium/include/ ]
+then
+    cd /run/live/medium/include/
+    DIRS=$(ls)
+    for i in ${DIRS}
+    do
+        rsync -av ${i}/ /${i}/
+    done
+fi
+
+
 # pull in /usr/local/etc/rc.local, if it is executable.
-# On my system, /usr/local/ is persistent, so this is a good way to have
-# individualized startup scripts without having to remaster the system.
 if [ -x /usr/local/etc/rc.local ]
 then
     . /usr/local/etc/rc.local
 fi
 
 # AUTOEXEC.BAT in the root of the live medium is also executed:
-if [ -e /lib/live/mount/medium/AUTOEXEC.BAT ]
-then
-    . /lib/live/mount/medium/AUTOEXEC.BAT
-fi
+SCRIPTDIR=/var/run/live/medium
+SCRIPTS=$(ls ${SCRIPTDIR} | grep -i autoexec.bat || true)
+for i in ${SCRIPTS}
+do
+        . ${SCRIPTDIR}/$i
+done
 
 exit 0
 
