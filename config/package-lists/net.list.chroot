@@ -87,7 +87,6 @@ whois
 wuzz
 
 # Pipes
-cryptcat
 ncat
 netcat-openbsd
 socat
