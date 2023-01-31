@@ -52,9 +52,6 @@ unrar-free
 unzip
 zip
 
-# Sound
-alsaplayer-text alsaplayer-gtk alsaplayer-alsa alsaplayer-common
-
 # Viewers
 feh
 gpicview
