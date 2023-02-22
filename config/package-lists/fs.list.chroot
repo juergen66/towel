@@ -57,7 +57,6 @@ wipe
 
 # Recovery
 dc3dd
-dcfldd
 gddrescue
 magicrescue
 myrescue
