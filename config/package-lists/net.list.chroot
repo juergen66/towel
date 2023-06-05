@@ -10,6 +10,7 @@ curl
 netwox
 ntpdate
 network-manager
+network-manager-gnome
 resolvconf
 
 # Connectivity
