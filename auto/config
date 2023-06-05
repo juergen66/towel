@@ -17,6 +17,7 @@ lb config noauto \
 --apt-indices "false" \
 --apt-secure "false" \
 --apt-options "--yes " \
+--archive-areas "main non-free-firmware" \
 --security "false" \
 --win32-loader false \
 --initsystem "systemd" \
