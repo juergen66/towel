@@ -37,7 +37,7 @@ tcpslice
 tcpxtract
 termshark
 tshark
-wireshark-gtk
+wireshark
 
 # Scanning/Probing/Debugging
 4g8
