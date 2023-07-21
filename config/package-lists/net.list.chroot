@@ -35,7 +35,7 @@ tcpflow
 tcpick
 tcpslice
 tcpxtract
-wireshark-common
+termshark
 tshark
 wireshark-gtk
 
