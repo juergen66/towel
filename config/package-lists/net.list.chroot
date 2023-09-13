@@ -40,30 +40,19 @@ tshark
 wireshark
 
 # Scanning/Probing/Debugging
-4g8
-arp-scan
 dhcping
 dnstracer
 dnsutils
-dsniff
-finger
 fping
 httping
-icmpinfo
-icmpush
-iperf
-ipgrab
+iperf3
 iputils-arping
 iputils-ping
 iputils-tracepath
 ldap-utils
 lft
 mtr
-nast
-nbtscan
 ndiff
-netdiscover
-netrw
 netsniff-ng
 nmap
 nstreams
@@ -72,7 +61,6 @@ oping
 p0f
 packeth
 packit
-reaver
 ssldump
 smb-nat
 snmp
