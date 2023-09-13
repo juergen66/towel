@@ -42,7 +42,6 @@ wireshark
 # Scanning/Probing/Debugging
 4g8
 arp-scan
-arping
 dhcping
 dnstracer
 dnsutils
@@ -54,6 +53,7 @@ icmpinfo
 icmpush
 iperf
 ipgrab
+iputils-arping
 iputils-ping
 iputils-tracepath
 ldap-utils
