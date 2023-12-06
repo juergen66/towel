@@ -5,7 +5,7 @@ make
 ht
 
 # lua
-lua5.2
+lua5.4
 
 # Python
 python3
