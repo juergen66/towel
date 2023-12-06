@@ -6,8 +6,6 @@ ext3grep
 ext4magic
 extundelete
 genext2fs
-reiser4progs
-reiserfsprogs
 
 # DOS/Windows
 dosfstools
