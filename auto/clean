@@ -1,4 +1,7 @@
 #!/bin/sh
 
 find config/* -maxdepth 0 -type f -exec rm \{\} \;
+rm config/bootloaders/isolinux/isolinux.bin
+rm config/bootloaders/isolinux/isolinux.cfg
+rm config/bootloaders/isolinux/ldlinux.c32
 lb clean noauto $*
