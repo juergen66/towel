@@ -25,7 +25,6 @@ wireguard
 wireguard-tools 
 
 # Packet Capture
-ettercap-text-only
 netsed
 ngrep
 pcapfix
@@ -57,7 +56,6 @@ netsniff-ng
 nmap
 nstreams
 onesixtyone
-oping
 p0f
 packeth
 packit
