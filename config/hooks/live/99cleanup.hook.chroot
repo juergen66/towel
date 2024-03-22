@@ -10,6 +10,8 @@ UNUSED="info
     logrotate
     tasksel
     cpp-10
+    raspi-firmware
+    firmware-nvidia-tesla-gsp
 "
 
 for PACKAGE in $UNUSED
