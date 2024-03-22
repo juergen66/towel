@@ -40,9 +40,10 @@ syslinux
 syslinux-common
 
 # X11
-xterm
 suckless-tools
+alacritty
 x11-utils
+xdg-utils
 xinit
 xfonts-base
 xserver-xorg
