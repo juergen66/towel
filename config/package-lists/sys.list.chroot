@@ -40,7 +40,6 @@ syslinux
 syslinux-common
 
 # X11
-suckless-tools
 alacritty
 x11-utils
 xdg-utils
