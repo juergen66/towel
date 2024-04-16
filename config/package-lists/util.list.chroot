@@ -19,7 +19,6 @@ tofrodos
 vim
 
 # Serial
-gkermit
 gtkterm
 lrzsz
 minicom
