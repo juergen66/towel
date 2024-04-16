@@ -11,6 +11,7 @@ UNUSED="info
     tasksel
     cpp-10
     raspi-firmware
+    firmware-nvidia-gsp
     firmware-nvidia-tesla-gsp
 "
 
