@@ -1,2 +1,2 @@
-prog Terminal Alacritty alacritty
+prog Terminal xterm xterm
 prog    "WWW" ! firefox --profile /root/etc/firefox/

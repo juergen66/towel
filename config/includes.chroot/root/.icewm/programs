@@ -11,7 +11,7 @@ prog "Monitor Settings" video-display lxrandr
 menu "System" folder {
 prog "GParted Partition Editor" gparted /usr/sbin/gparted
 prog "Hardware Locality lstopo" - lstopo
-prog "Terminal" Alacritty alacritty
+prog "Terminal" xterm xterm
 }
 
 menu "Utility" folder {

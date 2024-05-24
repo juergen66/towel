@@ -39,12 +39,12 @@ syslinux
 syslinux-common
 
 # X11
-alacritty
 x11-utils
 xdg-utils
 xinit
 xfonts-base
 xserver-xorg
+xterm
 
 # WM
 icewm
