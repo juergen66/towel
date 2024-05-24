@@ -13,7 +13,6 @@ blktool
 hdparm
 scsitools
 sdparm
-smartmontools
 
 # NIC
 ethtool
