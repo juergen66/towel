@@ -34,9 +34,6 @@ tcpflow
 tcpick
 tcpslice
 tcpxtract
-termshark
-tshark
-wireshark
 
 # Scanning/Probing/Debugging
 dhcping
