@@ -4,6 +4,7 @@ ascii
 debootstrap
 file
 ipv6calc
+libsixel-bin
 mc
 ncal
 patch
