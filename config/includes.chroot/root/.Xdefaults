@@ -1,3 +1,10 @@
 *VT100.allowWindowOps: true
 *VT100.allowTitleOps: true
 *VT100.allowFontOps: true
+XTerm*foreground:       #FFFFFF
+XTerm*background:       #000000
+XTerm.*.decTerminalID: vt340
+XTerm.*.numColorRegisters: 256
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
