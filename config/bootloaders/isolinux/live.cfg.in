@@ -18,7 +18,7 @@ label live-@FLAVOUR@-failsafe
 	menu label Live ^Failsafe
 	linux /live/vmlinuz
 	initrd /live/initrd.img
-	append boot=live components noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
+	append boot=live components noapic noapm nodma nomce nomodeset nosmp nosplash vga=normal nox11autologin timezone=America/New_York
 
 label ---------
 menu disable
