@@ -11,7 +11,6 @@ busybox-static
 console-common
 coreutils
 cryptsetup-bin
-cu
 eject
 fdisk
 firmware-linux-free
