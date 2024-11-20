@@ -24,7 +24,6 @@ wodim
 # Net
 cifs-utils
 curlftpfs
-httpfs2
 nfs-common
 sshfs
 
