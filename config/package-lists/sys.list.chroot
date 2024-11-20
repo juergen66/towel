@@ -13,7 +13,6 @@ coreutils
 cryptsetup-bin
 eject
 fdisk
-firmware-linux-free
 kbd
 locales
 man-db
