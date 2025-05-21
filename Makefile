@@ -2,6 +2,9 @@
 
 default: rebuild64
 
+dockermake:
+	docker run --privileged --volume .:/build/ towel-build-image make -C /build/
+
 rebuild: rebuild32 rebuild64
 
 rebuild32:
