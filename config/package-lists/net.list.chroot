@@ -8,7 +8,7 @@ macchanger
 openssl
 curl
 netwox
-ntpdate
+ntpsec-ntpdate
 network-manager
 network-manager-gnome
 resolvconf
@@ -39,7 +39,7 @@ tshark
 # Scanning/Probing/Debugging
 dhcping
 dnstracer
-dnsutils
+bind9-dnsutils
 fping
 httping
 iperf3
