@@ -38,7 +38,6 @@ syslinux
 syslinux-common
 
 # X11
-suckless-tools
 x11-utils
 xdg-utils
 xinit
