@@ -1,10 +1,11 @@
 tnftp
 firefox
-freerdp2-x11
+freerdp3-x11
 lynx
 openssh-client
 rsync
 smbclient
+samba-common-bin
 swaks
 tftp-hpa
 tinyirc
