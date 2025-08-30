@@ -84,8 +84,8 @@ copy() {
   then
     rsync_opts="--info=progress2"
   fi
-  rsync --recursive "${rsync_opts}"  "$1" "$2" || return 6
-  rm -rf "$2/isolinux/" || return 7
+  rsync --recursive "${rsync_opts}" --exclude="live/" --exclude="isolinux/"  "$1" "$2" || return 6
+  rsync --recursive --delete "${rsync_opts}" "$1/live/" "$2/live/" || return 7
 }
 
 # $1 destination drive
