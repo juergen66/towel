@@ -10,7 +10,6 @@ curl
 netwox
 ntpsec-ntpdate
 network-manager
-network-manager-applet
 resolvconf
 
 # Connectivity
