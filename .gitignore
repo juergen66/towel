@@ -1,0 +1,4 @@
+/local/
+/config/hooks/normal/
+/config/hooks/live/0010-disable-kexec-tools.hook.chroot
+/config/hooks/live/0050-disable-sysvinit-tmpfs.hook.chroot
