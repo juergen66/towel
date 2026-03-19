@@ -1,22 +1,14 @@
 #!/bin/sh
 
 systemctl disable dropbear
-systemctl disable ebtables
-systemctl disable hwclock.sh
-systemctl disable hwclockfirst.sh
-systemctl disable lvm2
 systemctl disable nfs-common
-systemctl disable open-iscsi
 systemctl disable openvpn
-systemctl disable pads
 systemctl disable partimaged
 systemctl disable rpcbind
-systemctl disable smartmontools
 systemctl disable tftpd-hpa
 systemctl disable tor
-systemctl disable udftools
 systemctl disable udhcpd
 systemctl disable NetworkManager-wait-online
 
-systemctl enable tweaks
+systemctl enable towel
 

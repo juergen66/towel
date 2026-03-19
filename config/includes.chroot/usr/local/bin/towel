@@ -1,0 +1,26 @@
+#!/bin/sh
+# Miscellaneous tweaks to the live system
+# Intended to be started as a oneshot systemd service
+
+# We need resolvconf for wg-quick, but it relocates resolv.conf
+ln -sf /run/resolvconf/resolv.conf /etc/resolv.conf
+
+# copy files from the /include/ directory on live medium
+if [ -d /run/live/medium/include/ ]
+then
+    cd /run/live/medium/include/
+    DIRS=$(ls)
+    for i in ${DIRS}
+    do
+        rsync -av ${i}/ /${i}/
+    done
+fi
+
+# AUTOEXEC.BAT in the root of the live medium (if any):
+SCRIPTDIR=/var/run/live/medium
+SCRIPTS=$(ls ${SCRIPTDIR} | grep -i autoexec.bat || true)
+for i in ${SCRIPTS}
+do
+        . ${SCRIPTDIR}/$i
+done
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Set up the live system
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/local/bin/towel
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
