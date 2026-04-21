@@ -2,6 +2,7 @@
 btrfs-progs
 e2fsprogs
 e2tools
+exfatprogs
 ext3grep
 ext4magic
 extundelete
