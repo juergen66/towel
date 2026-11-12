@@ -1,6 +1,5 @@
 # General
 bridge-utils
-isc-dhcp-client
 ifupdown
 net-tools
 iproute2
