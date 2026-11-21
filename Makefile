@@ -1,18 +1,10 @@
-.PHONY: rebuild rebuild32 rebuild64 clean distclean prepare config32 config64 build32 build64 uefi-test32 legacy-test32 build64 uefi-test64 legacy-test64 clone
+.PHONY: rebuild build clean distclean prepare config build uefi-test legacy-test clone
 
-default: rebuild64
+default: rebuild
 
-dockermake:
-	docker run --privileged --volume .:/build/ towel-build-image make -C /build/
-
-rebuild: rebuild32 rebuild64
-
-rebuild32:
+rebuild:
 	${MAKE} distclean
-	${MAKE} build32
-rebuild64:
-	${MAKE} distclean
-	${MAKE} build64
+	${MAKE} build
 
 clean:
 	lb clean
@@ -23,25 +15,13 @@ distclean:
 prepare:
 	cp -Lvn /usr/share/live/build/bootloaders/isolinux/* config/bootloaders/isolinux/
 
-config32:
-	LB_ARCH=i386 lb config
-
-config64:
+config:
 	LB_ARCH=amd64 lb config
 
-build32: config32 prepare
+build: config prepare
 	lb build
 
-build64: config64 prepare
-	lb build
-
-uefi-test32:
-	qemu-system-i386 -m 1024 -cdrom live-image-i386.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
-
-legacy-test32:
-	qemu-system-i386 -m 1024 -cdrom live-image-i386.hybrid.iso -bios /usr/share/seabios/bios.bin
-
-uefi-test64:
+uefi-test:
 	qemu-system-x86_64 -m 1024 -cdrom live-image-amd64.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
 
 legacy-test64:
