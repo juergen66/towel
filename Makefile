@@ -1,10 +1,17 @@
-.PHONY: rebuild build clean distclean prepare config build uefi-test legacy-test clone
+.PHONY: clean distclean prepare config uefi-test legacy-test clone
 
-default: rebuild
+ISO := live-image-amd64.hybrid.iso
 
-rebuild:
-	${MAKE} distclean
-	${MAKE} build
+default: $(ISO).sha256
+
+$(ISO).sha256: $(ISO)
+	sha256sum $(ISO) > $(ISO).sha256
+
+$(ISO): config
+	lb build
+
+config:
+	LB_ARCH=amd64 lb config
 
 clean:
 	lb clean
@@ -15,21 +22,15 @@ distclean:
 prepare:
 	cp -Lvn /usr/share/live/build/bootloaders/isolinux/* config/bootloaders/isolinux/
 
-local:
-	mkdir -p local
-	git -C local clone https://salsa.debian.org/live-team/live-build.git
-
-config:
-	LB_ARCH=amd64 lb config
-
-build: config prepare
-	lb build
-
 uefi-test:
 	qemu-system-x86_64 -m 1024 -cdrom live-image-amd64.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
 
 legacy-test64:
 	qemu-system-x86_64 -m 1024 -cdrom live-image-amd64.hybrid.iso -bios /usr/share/seabios/bios.bin
+
+local:
+	mkdir -p local
+	git -C local clone https://salsa.debian.org/live-team/live-build.git
 
 clone:
 	git clone git@github.com:juergen66/towel.git
