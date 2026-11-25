@@ -25,7 +25,7 @@ prepare:
 uefi-test:
 	qemu-system-x86_64 -m 1024 -cdrom live-image-amd64.hybrid.iso -bios /usr/share/qemu/OVMF.fd 
 
-legacy-test64:
+legacy-test:
 	qemu-system-x86_64 -m 1024 -cdrom live-image-amd64.hybrid.iso -bios /usr/share/seabios/bios.bin
 
 local:
