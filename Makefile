@@ -15,6 +15,10 @@ distclean:
 prepare:
 	cp -Lvn /usr/share/live/build/bootloaders/isolinux/* config/bootloaders/isolinux/
 
+local:
+	mkdir -p local
+	git -C local clone https://salsa.debian.org/live-team/live-build.git
+
 config:
 	LB_ARCH=amd64 lb config
 
